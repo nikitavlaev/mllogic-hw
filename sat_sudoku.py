@@ -6,8 +6,10 @@
 
 import pycosat
 import numpy as np
+import sys
 
-data = np.loadtxt('input.txt', dtype='int')
+path = 'inputs/input' + sys.argv[1] + '.txt'
+data = np.loadtxt(path, dtype='int')
 print(data)
 if data.shape[0] != data.shape[1]:
     print("Not square-shaped table")
